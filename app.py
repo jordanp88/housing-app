@@ -7,7 +7,7 @@ combined_df = pd.read_csv('home_data.csv')
 # %%
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.metrics import r2_score
 
 # Features and target
 X = combined_df[['bed', 'bath', 'acre_lot', 'house_size']]
@@ -26,7 +26,7 @@ xgb_pred = xgb_model.predict(X_test)
 
 print("🔷 XGBoost Regressor:")
 print(f"R^2 Score: {r2_score(y_test, xgb_pred):.2f}")
-print(f"RMSE: {mean_squared_error(y_test, xgb_pred, squared=False):,.2f}")
+
 
 # %%
 import joblib
