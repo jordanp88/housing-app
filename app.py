@@ -44,7 +44,7 @@ import joblib
 model = joblib.load('xgb_model.pkl')
 
 # App title
-st.title("🏠 House Price Predictor")
+st.title("🏠 Charlotte, NC House Price Predictor")
 st.markdown("Enter the house features below to predict the estimated price.")
 
 # Input fields
